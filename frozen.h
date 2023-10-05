@@ -28,7 +28,7 @@ extern "C" {
 #include <stdio.h>
 #include <limits.h>
 
-#if defined(_WIN32) && _MSC_VER < 1700
+#if defined(_WIN32) && _MSC_VER < 1700 && !defined(bool)
 typedef int bool;
 enum { false = 0, true = 1 };
 #else
